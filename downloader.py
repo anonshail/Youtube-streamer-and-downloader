@@ -33,7 +33,7 @@ while (choice == 'y' or choice == 'Y'):
 
         if(vid_choice == 'y' or vid_choice == 'Y'):
             final_download_list.append(url)
-            break
+            break   
 
     choice = input("Add more songs?(y/n)")
 
