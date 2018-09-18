@@ -2,6 +2,7 @@ import urllib.request
 import urllib.parse
 import numpy as np
 import re
+import pafy
 
 def to_search():
     '''
@@ -13,13 +14,14 @@ def to_search():
 
     #the list that contains the links of all the searches
     search_results = ["http://www.youtube.com/watch?v=" + i for i in search_results]
+    return search_results
 
 #now, we are going to ask the user for the songs that they wish to download, and form a list out of them
 choice = 'y';  #choice variable
 
 final_download_list = []
 while (choice == 'y' or choice == 'Y'):
-    links = serach();   #asks the user to input which video he wants to download
+    links = to_search();   #asks the user to input which video he wants to download
 
     #looping through links
     no = 0  #counter that holds the index of the current url in the loop
@@ -30,8 +32,8 @@ while (choice == 'y' or choice == 'Y'):
 
     vid_choice = input("Enter index of the video(-1 to cancel)")
 
-    if(vid_choice == -1)    #skipping the song
-        continue;
+    if(vid_choice == -1):   #skipping the current video
+        continue
 
     final_download_list.append(links[vid_choice])
 
