@@ -29,13 +29,11 @@ while (choice == 'y' or choice == 'Y'):
         video = pafy.new(url)   #creating a new video instane
         print(no+1, ". ", video.title)
         no+=1
+        vid_choice = input("Is this the correct video?(y/n)")
 
-    vid_choice = input("Enter index of the video(-1 to cancel)")
-
-    if(vid_choice == -1):   #skipping the current video
-        continue
-
-    final_download_list.append(links[vid_choice])
+        if(vid_choice == 'y' or vid_choice == 'Y'):
+            final_download_list.append(url)
+            break
 
     choice = input("Add more songs?(y/n)")
 
