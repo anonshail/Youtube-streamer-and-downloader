@@ -5,4 +5,5 @@ This is a program that allows one to stream and download videos from YouTube, us
 You will need to install pafy, and youtube-dl. This can be done by the following commands:
 
 pip3 install pafy
+
 pip3 install youtube-dl
