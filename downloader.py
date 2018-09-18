@@ -28,7 +28,7 @@ while (choice == 'y' or choice == 'Y'):
         print(no+1, ". ", video.title)
         no+=1
 
-    int vid_choice = input("Enter index of the video(-1 to cancel)")
+    vid_choice = input("Enter index of the video(-1 to cancel)")
 
     if(vid_choice == -1)    #skipping the song
         continue;
