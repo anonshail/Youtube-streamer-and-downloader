@@ -33,9 +33,11 @@ while (choice == 'y' or choice == 'Y'):
 
         if(vid_choice == 'y' or vid_choice == 'Y'):
             final_download_list.append(url)
-            break   
+            break
 
     choice = input("Add more songs?(y/n)")
+
+print("Final list ready, downloading . . .")
 
 #now, we loop through the final_download_list and download the best audiostream available
 for url in final_download_list:
