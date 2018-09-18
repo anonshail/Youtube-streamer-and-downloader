@@ -43,7 +43,7 @@ print("Final list ready, downloading . . .")
 for url in final_download_list:
     video = pafy.new(url)   #creating a new video instane
     print("Downloading ", video.title, " . . .")
-    bestaudio = video.getbestaudio()
+    bestaudio = video.getbestaudio(preftype="m4a")
     bestaudio.download()
     print("Finished")
 
