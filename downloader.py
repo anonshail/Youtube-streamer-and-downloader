@@ -18,7 +18,7 @@ def to_search():
 choice = 'y';  #choice variable
 
 final_download_list = []
-while (choice == 'y' || choice == 'Y'):
+while (choice == 'y' or choice == 'Y'):
     links = serach();   #asks the user to input which video he wants to download
 
     #looping through links
