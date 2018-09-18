@@ -25,7 +25,7 @@ while (choice == 'y' or choice == 'Y'):
     no = 0  #counter that holds the index of the current url in the loop
     for url in links:
         video = pafy.new(url)   #creating a new video instane
-        print(no+1, ". ", url)
+        print(no+1, ". ", video.title)
         no+=1
 
     int vid_choice = input("Enter index of the video(-1 to cancel)")
@@ -38,3 +38,11 @@ while (choice == 'y' or choice == 'Y'):
     choice = input("Add more songs?(y/n)")
 
 #now, we loop through the final_download_list and download the best audiostream available
+for url in final_download_list:
+    video = pafy.new(url)   #creating a new video instane
+    print("Downloading ", video.title, " . . .")
+    bestaudio = video.getbestaudio()
+    bestaudio.download()
+    print("Finished")
+
+print("All audio files have been successfully donwloaded.")
